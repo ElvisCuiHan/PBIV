@@ -3,23 +3,22 @@
 #' Authors: Xuyang Lu <xylu@ucla.edu>; Elvis Cui <elviscuihan@g.ucla.edu>
 #' Updated on 2022-07-22
 
-#' Y = observed time to event or censoring
-#' d = censoring status, 1=event, 0=censored
-#' X = covariate of interest
-#' G = instruments
-#' U = observed potential confounders
-#' G is a matrix of n x kG if multiple instruments are used;
-#' U is a matrix of n x kU if multiple observed confounders are used; the default is NULL
+#' @param Y = observed time to event or censoring
+#' @param d = censoring status, 1=event, 0=censored
+#' @param X = covariate of interest
+#' @param G = instruments
+#' @param U = observed potential confounders
+#' @param G is a matrix of n x kG if multiple instruments are used;
+#' @param U is a matrix of n x kU if multiple observed confounders are used; the default is NULL
 #' where n is sample size, kG is number of instruments, kU is number of observed confounders
 #' A total of (6+kG+2*kU) parameters to estimate: a0, a1 (length=kG), a2 (length=kU), sig1, b0, b1, b2 (length=kU), sig2, and rho
-#' m = number of iterations
-#' wid = a vector of the random walk width for (a0,a1,a2,sig1,b0,b1,b2,sig2,rho)
-#' init = a vector of the initial values for (a0,a1,a2,sig1,b0,b1,b2,sig2,rho), default value is NULL
-#' prior_1 = a vector of the first parameter of the priors for (a0,a1,a2,sig1,b0,b1,b2,sig2): 
+#' @param m = number of iterations
+#' @param wid = a vector of the random walk width for (a0,a1,a2,sig1,b0,b1,b2,sig2,rho)
+#' @param init = a vector of the initial values for (a0,a1,a2,sig1,b0,b1,b2,sig2,rho), default value is NULL
+#' @param prior_1 = a vector of the first parameter of the priors for (a0,a1,a2,sig1,b0,b1,b2,sig2): 
 #' mean of the normal priors for a0,a1,a2,b0,b1,b2; shape parameter of the inverse-gamma priors for sig1, sig2
-#' prior_2 = a vector of the second parameter of the priors for (a0,a1,a2,sig1,b0,b1,b2,sig2): 
+#' @param prior_2 = a vector of the second parameter of the priors for (a0,a1,a2,sig1,b0,b1,b2,sig2): 
 #' variance of the normal priors for a0,a1,a2,b0,b1,b2; scale parameter of the inverse-gamma priors for sig1, sig2
-#' @param infile MH-related parameters
 #' @return A list containing traces and accept rates
 #' @export
 
