@@ -1,10 +1,10 @@
 #' @title Parametric Bayesian Instrumental Variable (PBIV) Methods
 
-#' IV analysis function with bivariate normal random errors
+#' @description IV analysis function with bivariate normal random errors
 #' with multiple instruments and multiple observed potential confounders.
 #' This function deals with the arbitrary censoring version of Li-Lu's PBIV method published
 #' in \emph{Stats. in Med.} \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4314427/}.
-#' @author  Xuyang Lu <xylu@ucla.edu>; Elvis Cui <elviscuihan@g.ucla.edu>
+#' @author  Xuyang Lu <xylu@ucla.edu>; Elvis Han Cui <elviscuihan@g.ucla.edu>
 #' Updated on 2022-07-22
 
 #' @param L left-observed time to event or censoring

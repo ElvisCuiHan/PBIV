@@ -2,11 +2,7 @@
 % Please edit documentation in R/IV_MH_Interval_Censored.R
 \name{IV_MH_IC}
 \alias{IV_MH_IC}
-\title{Parametric Bayesian Instrumental Variable (PBIV) Methods
-IV analysis function with bivariate normal random errors
-with multiple instruments and multiple observed potential confounders.
-This function deals with the arbitrary censoring version of Li-Lu's PBIV method published
-in \emph{Stats. in Med.} \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4314427/}.}
+\title{Parametric Bayesian Instrumental Variable (PBIV) Methods}
 \usage{
 IV_MH_IC(L, R, d, X, G, U = NULL, m, wid, init = NULL, prior_1, prior_2)
 }
@@ -41,13 +37,12 @@ variance of the normal priors for a0,a1,a2,b0,b1,b2; scale parameter of the inve
 A list containing traces and accept rates
 }
 \description{
-Parametric Bayesian Instrumental Variable (PBIV) Methods
 IV analysis function with bivariate normal random errors
 with multiple instruments and multiple observed potential confounders.
 This function deals with the arbitrary censoring version of Li-Lu's PBIV method published
 in \emph{Stats. in Med.} \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4314427/}.
 }
 \author{
-Xuyang Lu \href{mailto:xylu@ucla.edu}{xylu@ucla.edu}; Elvis Cui \href{mailto:elviscuihan@g.ucla.edu}{elviscuihan@g.ucla.edu}
+Xuyang Lu \href{mailto:xylu@ucla.edu}{xylu@ucla.edu}; Elvis Han Cui \href{mailto:elviscuihan@g.ucla.edu}{elviscuihan@g.ucla.edu}
 Updated on 2022-07-22
 }
