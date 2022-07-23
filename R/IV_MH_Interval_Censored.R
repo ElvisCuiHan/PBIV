@@ -1,10 +1,11 @@
 #' IV analysis function with bivariate normal random errors
 #' with multiple instruments and multiple observed potential confounders
 #'
-#' @author : Xuyang Lu <xylu@ucla.edu>; Elvis Cui <elviscuihan@g.ucla.edu>
+#' @author  Xuyang Lu <xylu@ucla.edu>; Elvis Cui <elviscuihan@g.ucla.edu>
 #' Updated on 2022-07-22
 
-#' @param (L, R] observed time to event or censoring
+#' @param L left-observed time to event or censoring
+#' @param R right-observed time to event or censoring
 #' @param d censoring status, 4=event, 3=right-censored, 2=interval-censored, 1=left-censored
 #' @param X covariate of interest
 #' @param G instruments

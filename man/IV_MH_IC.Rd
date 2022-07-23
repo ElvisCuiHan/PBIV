@@ -8,6 +8,10 @@ with multiple instruments and multiple observed potential confounders}
 IV_MH_IC(L, R, d, X, G, U = NULL, m, wid, init = NULL, prior_1, prior_2)
 }
 \arguments{
+\item{L}{left-observed time to event or censoring}
+
+\item{R}{right-observed time to event or censoring}
+
 \item{d}{censoring status, 4=event, 3=right-censored, 2=interval-censored, 1=left-censored}
 
 \item{X}{covariate of interest}
@@ -29,8 +33,6 @@ mean of the normal priors for a0,a1,a2,b0,b1,b2; shape parameter of the inverse-
 
 \item{prior_2}{a vector of the second parameter of the priors for (a0,a1,a2,sig1,b0,b1,b2,sig2):
 variance of the normal priors for a0,a1,a2,b0,b1,b2; scale parameter of the inverse-gamma priors for sig1, sig2}
-
-\item{(L, }{R] observed time to event or censoring}
 }
 \value{
 A list containing traces and accept rates
@@ -40,6 +42,6 @@ IV analysis function with bivariate normal random errors
 with multiple instruments and multiple observed potential confounders
 }
 \author{
-: Xuyang Lu \href{mailto:xylu@ucla.edu}{xylu@ucla.edu}; Elvis Cui \href{mailto:elviscuihan@g.ucla.edu}{elviscuihan@g.ucla.edu}
+Xuyang Lu \href{mailto:xylu@ucla.edu}{xylu@ucla.edu}; Elvis Cui \href{mailto:elviscuihan@g.ucla.edu}{elviscuihan@g.ucla.edu}
 Updated on 2022-07-22
 }
