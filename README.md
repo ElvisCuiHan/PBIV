@@ -26,4 +26,4 @@ where
 - prior_1: A vector of the first parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma^2_2)$: mean of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; shape parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
 - prior_2: A vector of the second parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2)$: variance of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; scale parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
 
-The ``
+The `IV_MH_IC` function returns a list containing MCMC traces and accept rates.
