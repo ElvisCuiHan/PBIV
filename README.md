@@ -12,8 +12,13 @@ This `R` package extends [Li-Lu's PBIV estimation](https://onlinelibrary.wiley.c
     ivreg(L, R, d, X, G, U = NULL, m, wid, init = NULL, prior_1, prior_2)
 
 where
-- L: A $n\times1$ vector refers to left-observed time to event or censoring
-- R: A $n\times1$ vector refers to right-observed time to event or censoring
-- d: A $n\times1$ vector refers to censoring status, *4=event, 3=right-censored, 2=interval-censored, 1=left-censored*
-- X: A $n\times1$ vector refers to the covariate of interest, i.e., the exposure using the language of randomized clinical trials (RCT)
-- G: A $n\times kG$ matrix if multiple instruments are used
+- L: $n\times1$ vector refers to left-observed time to event or censoring
+- R: $n\times1$ vector refers to right-observed time to event or censoring
+- d: $n\times1$ vector refers to censoring status, *4=event, 3=right-censored, 2=interval-censored, 1=left-censored*
+- X: $n\times1$ vector refers to the covariate of interest, i.e., the exposure using the language of randomized clinical trials (RCT)
+- G: $n\times kG$ matrix if multiple instruments are used
+- U: $n \times kU$ matrix if multiple observed confounders are used; the default is NULL where n is sample size, $kG$ is number of instruments, $kU$ is number of observed confounders A total of $(6+kG+2*kU)$ parameters to estimate: $a_0$, $a_1$ (length=$kG$), $a_2$ (length=$kU$), $\sigma_1^2$, $b_0$, $b_1$, $b_2$ (length=$kU$), $\sigma_2$, and $\rho$
+- m: A scalr refers to the number of iterations of the MCMC algorithm
+- wid: vector of the random walk width for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2,\rho)$ in the MCMC algorithm
+- init:	A vector of the initial values for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2,\rho)$, default value is NULL
+- prior_1: A vector of the first parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma^2_2)$: mean of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; shape parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
