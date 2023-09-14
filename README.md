@@ -1,4 +1,4 @@
-# Parametric Bayesian Instrumental Variable (PBIV) Estimation
+# Parametric Bayesian Instrumental Variable (PBIV)
 
 This `R` package extends [Li-Lu's PBIV estimation](https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.6369), which was orignally for right-censored data only, to arbitrary censoring time-to-event outcome. The *PBIV* package deals with causal effect estimation using instrumental variables.
 
@@ -22,3 +22,4 @@ where
 - wid: vector of the random walk width for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2,\rho)$ in the MCMC algorithm
 - init:	A vector of the initial values for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2,\rho)$, default value is NULL
 - prior_1: A vector of the first parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma^2_2)$: mean of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; shape parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
+- prior_2: A vector of the second parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2)$: variance of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; scale parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
