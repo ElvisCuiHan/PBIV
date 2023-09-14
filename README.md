@@ -6,10 +6,12 @@ This `R` package extends [Li-Lu's PBIV estimation](https://onlinelibrary.wiley.c
 
     devtools::install_github("https://github.com/ElvisCuiHan/PBIV/")
 
+There is one main function `IV_MH_IC` in the package. It deals with bivariate normal random errors with multiple instruments and multiple observed potential confounders within the [two-stage linear model framework](https://www.tandfonline.com/doi/pdf/10.1080/01621459.1995.10476535?casa_token=eOGWmrHSCSQAAAAA:azlG4TqGnptppixI5srRZ7R47z_pv5bbAsDU-I8_oRFzrEC_slXF9MJ7e-YlpFRYX5UoyoW_DSuk).
+
 **Instrumental variables regression:**
 
     library("PBIV")
-    ivreg(L, R, d, X, G, U = NULL, m, wid, init = NULL, prior_1, prior_2)
+    IV_MH_IC(L, R, d, X, G, U = NULL, m, wid, init = NULL, prior_1, prior_2)
 
 where
 - L: $n\times1$ vector refers to left-observed time to event or censoring
@@ -23,3 +25,5 @@ where
 - init:	A vector of the initial values for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2,\rho)$, default value is NULL
 - prior_1: A vector of the first parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma^2_2)$: mean of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; shape parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
 - prior_2: A vector of the second parameter of the priors for $(a_0,a_1,a_2,\sigma_1^2,b_0,b_1,b_2,\sigma_2^2)$: variance of the normal priors for $a_0,a_1,a_2,b_0,b_1,b_2$; scale parameter of the inverse-gamma priors for $\sigma_1^2, \sigma_2^2$
+
+The ``
